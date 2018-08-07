@@ -6,7 +6,7 @@
     <meta name="description" content="Solar System Scene">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
-    <script src="components/progressive-texture-2.js"></script>
+    <script src="components/progressive-texture-3.js"></script>
   </head>
   <body>      
     <a-scene>
@@ -20,13 +20,13 @@
 
       <a-entity>
         <a-sphere id="sphere1" src="#earth-cloud-small" radius="2" segments-height="53"
-            animation__fadein="property: material.opacity; dur: 3000; from: 0; to: 1; loop: false; easing: linear; startEvents: sphere1-fadein;"
-            animation__fadeout="property: material.opacity; dur: 3000; from: 1; to: 0; loop: false; easing: linear; startEvents: sphere1-fadeout;"
-            progressive-texture-2="fadeForwardEvent: fadeout; fadeBackwardEvent: fadein; thresholdDistance: 25; probeObject: #cam;">
+            animation__fadein="property: material.opacity; dur: 3000; from: 0; to: 1; loop: false; easing: linear; startEvents: moveout;"
+            animation__fadeout="property: material.opacity; dur: 3000; from: 1; to: 0; loop: false; easing: linear; startEvents: movein;"
+            progressive-texture-3="fadeForwardEvent: movein; fadeBackwardEvent: moveout; thresholdDistance: 25; probeObject: #cam;">
             <a-sphere id="sphere2" src="#earth-bathymetry" radius="2" segments-height="53" material="opacity: 0;"
-                animation__fadein="property: material.opacity; dur: 3000; from: 0; to: 1; loop: false; easing: linear; startEvents: sphere2-fadein;"
-                animation__fadeout="property: material.opacity; dur: 3000; from: 1; to: 0; loop: false; easing: linear; startEvents: sphere2-fadeout;"
-                progressive-texture-2="fadeForwardEvent: fadein; fadeBackwardEvent: fadeout; thresholdDistance: 25; probeObject: #cam;">
+                animation__fadein="property: material.opacity; dur: 3000; from: 0; to: 1; loop: false; easing: linear; startEvents: movein;"
+                animation__fadeout="property: material.opacity; dur: 3000; from: 1; to: 0; loop: false; easing: linear; startEvents: moveout;"
+                progressive-texture-3="fadeForwardEvent: movein; fadeBackwardEvent: moveout; thresholdDistance: 25; probeObject: #cam;">
             </a-sphere>
         </a-sphere>
       </a-entity>
