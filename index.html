@@ -10,10 +10,13 @@
   </head>
   <body>      
     <a-scene>
-      <a-assets>
-        <img id="earth-normal" crossorigin="anonymous" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" />
+      <a-assets timeout="3000">
+        <!-- <img id="earth-normal" crossorigin="anonymous" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" />
         <img id="earth-cloud-small" crossorigin="anonymous" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_350.jpg" />
-        <img id="earth-bathymetry" crossorigin="anonymous" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73963/gebco_08_rev_bath_3600x1800_color.jpg" />    
+        <img id="earth-bathymetry" crossorigin="anonymous" src="https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73963/gebco_08_rev_bath_3600x1800_color.jpg" />     -->
+        <img id="earth-normal" crossorigin="anonymous" src="images/earth_atmos_4096.jpg" />
+        <img id="earth-cloud-small" crossorigin="anonymous" src="images/cloud_combined_350.jpg" />
+        <img id="earth-bathymetry" crossorigin="anonymous" src="images/gebco_08_rev_bath_3600x1800_color.jpg" />  
       </a-assets>
 
       <a-entity id="cam" camera="active: true" wasd-controls="" position="0 0 35" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
@@ -31,8 +34,7 @@
         </a-sphere>
       </a-entity>
 
-
     </a-scene>
-        
+
   </body>
 </html>
